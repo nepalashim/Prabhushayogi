@@ -8,6 +8,9 @@ __pycache__/
 #Claude
 .claude/
 
+# Internal build spec (not part of the shipped project)
+prabhu-agentic-rag-build-prompt-v3-gpu.md
+
 # Ad-hoc debug/test logs (e.g. install_log.txt, uvicorn_test.log, eval_run*.log)
 *.log
 install_log.txt
@@ -34,3 +37,6 @@ frontend/dist/
 # OS
 Thumbs.db
 .DS_Store
+
+#files
+prabhu-agentic-rag-build-prompt-v3-gpu.md
