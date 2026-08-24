@@ -1,0 +1,47 @@
+# torch is intentionally NOT pinned here - it comes in transitively via
+# docling -> torchvision, and torchvision's compiled extensions are
+# ABI-matched to a specific torch version. scripts/install_deps.ps1 (or .sh)
+# installs this file first (pulling in a CPU-only torch as a side effect of
+# resolving that pairing), then swaps ONLY torch for the CUDA build of that
+# *same* version from https://download.pytorch.org/whl/cu124. Do not
+# `pip install torch` from the default index by hand after this file - it
+# will already be satisfied by whatever torchvision needs; use the install
+# script (or README.md) for the CUDA swap step instead.
+
+# --- Web/API ---
+fastapi
+uvicorn[standard]
+sse-starlette
+pydantic
+pydantic-settings
+
+# --- LLM routing ---
+litellm
+
+# --- Agent orchestration ---
+llama-index-core
+
+# --- PDF parsing ---
+pymupdf
+docling
+
+# --- Web crawling ---
+crawl4ai
+
+# --- Embeddings / reranking ---
+sentence-transformers>=2.7.0
+transformers>=4.51.0
+
+# --- Vector DB ---
+qdrant-client
+
+# --- Persistence ---
+aiosqlite
+
+# --- Testing ---
+pytest
+pytest-asyncio
+httpx
+
+# --- Dev quality ---
+ruff

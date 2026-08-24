@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  --brand-green: #0f7b3f;
+  --brand-green-dark: #0a5c2e;
+  --brand-green-light: #e6f4ec;
+  --brand-red: #d32f2f;
+  --surface: #ffffff;
+  --surface-muted: #f7f8fa;
+  --text-primary: #1a1a1a;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  background: var(--surface-muted);
+  color: var(--text-primary);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Minimal markdown styling for assistant messages (MessageBubble.tsx) */
+.prose-chat p {
+  margin: 0 0 0.5em;
+}
+.prose-chat p:last-child {
+  margin-bottom: 0;
+}
+.prose-chat ul,
+.prose-chat ol {
+  margin: 0 0 0.5em;
+  padding-left: 1.25em;
+}
+.prose-chat li {
+  margin-bottom: 0.2em;
+}
+.prose-chat a {
+  color: var(--brand-green-dark);
+  text-decoration: underline;
+}
+.prose-chat strong {
+  font-weight: 600;
+}
+.prose-chat code {
+  background: var(--surface-muted);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+  font-size: 0.9em;
+}

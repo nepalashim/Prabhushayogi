@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+#Claude
+.claude/
+
+# Ad-hoc debug/test logs (e.g. install_log.txt, uvicorn_test.log, eval_run*.log)
+*.log
+install_log.txt
+
+# Virtual environment (already exists locally; not tracked)
+.venv/
+
+# Env secrets
+.env
+
+# Generated/local data
+data/qdrant_storage/
+data/app.db
+data/index_meta.json
+data/crawled_pages/*
+!data/crawled_pages/.gitkeep
+data/raw_pdfs/*
+!data/raw_pdfs/.gitkeep
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# OS
+Thumbs.db
+.DS_Store

@@ -1,0 +1,51 @@
+# For later Linux/production deployment only.
+#
+# Local Windows dev runs the backend natively in .venv (see README.md) - GPU
+# access from a container on Windows needs WSL2 + NVIDIA Container Toolkit,
+# real setup friction that buys nothing for local iteration once native
+# torch.cuda.is_available() already works. This image is for a Linux host
+# where GPU-in-container is comparatively simple, or for a CPU-only
+# deployment target where GPU isn't needed at all.
+#
+# Build (CPU, default):
+#   docker build -f Dockerfile.backend -t prabhu-sahayogi-backend .
+# Build (CUDA, on a Linux host with the NVIDIA Container Toolkit installed):
+#   docker build -f Dockerfile.backend \
+#     --build-arg TORCH_INDEX_URL=https://download.pytorch.org/whl/cu130 \
+#     -t prabhu-sahayogi-backend .
+#   (check https://pytorch.org/get-started/locally/ for the current cuXXX
+#   index name if that one 404s - see scripts/install_deps.ps1's comments)
+
+FROM python:3.13-slim
+
+ARG TORCH_INDEX_URL=https://download.pytorch.org/whl/cpu
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+# Same two-step order as scripts/install_deps.ps1/.sh, for the same reason:
+# requirements.txt resolves a torch version transitively via
+# docling -> torchvision, so we let that resolve first (whatever build pip's
+# default index gives it), then swap in the CUDA (or here, whichever
+# TORCH_INDEX_URL was chosen) build of that *same* version - never install
+# torch first, see those scripts' comments for the full explanation of why.
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt \
+    && TORCH_VERSION=$(python -c "import torch; print(torch.__version__.split('+')[0])") \
+    && pip install --no-cache-dir "torch==${TORCH_VERSION}" --index-url "${TORCH_INDEX_URL}" --force-reinstall --no-deps
+
+# Official Playwright pattern: installs both the Chromium binary and the
+# system libraries it needs in one step (crawl4ai's own crawl4ai-setup only
+# handles the binary, not system deps, inside a minimal base image).
+RUN python -m playwright install --with-deps chromium
+
+COPY . .
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONUTF8=1 \
+    QDRANT_URL=http://qdrant:6333
+
+EXPOSE 8000
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

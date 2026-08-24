@@ -1,0 +1,30 @@
+{"id": "demat-01", "category": "demat_services", "question": "How do I open a Demat account with Prabhu Capital, and what are the charges?", "expected_sources": ["merchant-banking-services"]}
+{"id": "demat-02", "category": "demat_services", "question": "What are the Demat account renewal fees?", "expected_sources": ["merchant-banking-services"]}
+{"id": "demat-03", "category": "demat_services", "question": "Is there a lifetime Demat account option that avoids annual renewal fees?", "expected_sources": ["merchant-banking-services"]}
+{"id": "demat-04", "category": "demat_services", "question": "Does Prabhu Capital offer a free Demat scheme for remittance customers?", "expected_sources": ["merchant-banking-services"]}
+{"id": "demat-05", "category": "demat_services", "question": "Is Prabhu Capital a licensed Depository Participant?", "expected_sources": ["merchant-banking-services"]}
+{"id": "mf-01", "category": "mutual_funds_sip", "question": "What mutual fund schemes and SIP options does Prabhu Capital offer?", "expected_sources": ["mutual-fund"]}
+{"id": "mf-02", "category": "mutual_funds_sip", "question": "How can I start a SIP with Prabhu Capital?", "expected_sources": ["mutual-fund"]}
+{"id": "mf-03", "category": "mutual_funds_sip", "question": "Does Prabhu Capital manage mutual funds?", "expected_sources": ["mutual-fund"]}
+{"id": "mf-04", "category": "mutual_funds_sip", "question": "Where do I log in to check my mutual fund investments?", "expected_sources": ["mutual-fund"]}
+{"id": "mf-05", "category": "mutual_funds_sip", "question": "What is PSIS and how is it related to mutual funds?", "expected_sources": ["mutual-fund"]}
+{"id": "pms-01", "category": "portfolio_management", "question": "What is Prabhu Capital's Portfolio Management Service and how can I enroll?", "expected_sources": ["investment-banking-services"]}
+{"id": "pms-02", "category": "portfolio_management", "question": "Does Prabhu Capital offer discretionary portfolio management?", "expected_sources": ["investment-banking-services"]}
+{"id": "pms-03", "category": "portfolio_management", "question": "Who do I contact about Portfolio Management Services?", "expected_sources": ["investment-banking-services"]}
+{"id": "pms-04", "category": "portfolio_management", "question": "What is the minimum investment for PMS at Prabhu Capital?", "expected_sources": ["investment-banking-services"]}
+{"id": "pms-05", "category": "portfolio_management", "question": "Is Portfolio Management Service part of merchant banking or investment banking at Prabhu Capital?", "expected_sources": ["investment-banking-services"]}
+{"id": "ipo-01", "category": "ipo_share_issues", "question": "How can I apply for an IPO through Prabhu Capital, and how do I check share allotment?", "expected_sources": ["static_reference"]}
+{"id": "ipo-02", "category": "ipo_share_issues", "question": "How do I check my IPO share allotment status?", "expected_sources": ["static_reference"]}
+{"id": "ipo-03", "category": "ipo_share_issues", "question": "How do I check my right share eligibility?", "expected_sources": ["static_reference"]}
+{"id": "ipo-04", "category": "ipo_share_issues", "question": "Does Prabhu Capital manage debenture issues?", "expected_sources": ["merchant-banking-services"]}
+{"id": "ipo-05", "category": "ipo_share_issues", "question": "What is on the current issue notice / IPO calendar?", "expected_sources": ["media", "calendar"]}
+{"id": "rts-01", "category": "share_registrar", "question": "What Registrar to Shares services does Prabhu Capital provide to companies and shareholders?", "expected_sources": ["merchant-banking-services"]}
+{"id": "rts-02", "category": "share_registrar", "question": "How do I check if my share certificate is on the non-dematerialized certificates list?", "expected_sources": ["static_reference"]}
+{"id": "rts-03", "category": "share_registrar", "question": "How do I check for unclaimed dividends?", "expected_sources": ["static_reference"]}
+{"id": "rts-04", "category": "share_registrar", "question": "How do I check the Demat rejection list?", "expected_sources": ["static_reference"]}
+{"id": "rts-05", "category": "share_registrar", "question": "Which listed companies use Prabhu Capital as their share registrar?", "expected_sources": ["merchant-banking-services"]}
+{"id": "fees-01", "category": "fees_forms_downloads", "question": "Where can I find Prabhu Capital's forms, and what are the Demat renewal fees?", "expected_sources": ["downloads", "merchant-banking-services"]}
+{"id": "fees-02", "category": "fees_forms_downloads", "question": "Where can I download the corporate Demat account opening form?", "expected_sources": ["downloads"]}
+{"id": "fees-03", "category": "fees_forms_downloads", "question": "How do I check my AMC payment status?", "expected_sources": ["static_reference"]}
+{"id": "fees-04", "category": "fees_forms_downloads", "question": "What is Prabhu Capital's support hotline number?", "expected_sources": ["static_reference"]}
+{"id": "fees-05", "category": "fees_forms_downloads", "question": "Where can I find Prabhu Capital's latest press releases?", "expected_sources": ["downloads", "media"]}
